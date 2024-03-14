@@ -1,0 +1,109 @@
+{% load static %}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Times, Times New Roman, serif;
+    line-height: 1.6;
+    background-color: #f1f3f2;
+    font-size: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+
+header {
+    background-image: url("/static/main/images/header/header5.jpg");
+    background-size: contain;
+ 	background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+.profile-header {
+    background-color: #b71c1c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.profile-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+
+main {
+    padding: 20px 0;
+}
+
+
+footer {
+    background-color: #a11826;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px 0;
+	width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header a:hover {
+    color: #ff0000; /* Красный цвет при наведении */
+}
+
+.header a {
+    transition: color 0.3s ease;
+}
+
+
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form {
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}

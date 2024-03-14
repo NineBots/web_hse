@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О бренде Gucci</title>
+    <link rel="stylesheet" href="{% static 'review/css/review.css' %}">
+</head>
+<body>
+    <header id = "top" class="header">
+        <div class="container">
+            <h1>MyGucci</h1>
+            <nav>
+                <ul>
+                    <li><a class = "header-link" href="http://127.0.0.1:8000/">Главная</a></li>
+                    <li><a class = "header-link" href="http://127.0.0.1:8000/algo/">Задача</a></li>
+                    <li><a class = "header-link" href="#">Отзывы</a></li>
+                    <li><a class = "header-link" target = "_blank" href="https://www.gucci.com/int/ru/">Партнер</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container" >
+		     <h2>Contact Us</h2>
+                <form class="contact-form" method="post" action="/review/post-contact-us">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Фамилия:</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="group">Группа:</label>
+                        <input type="text" id="group" name="group" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Телефон:</label>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{11}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            {% for contact in contacts %}
+            <div class="feedback-form">
+                <a>
+                    Имя: {{ contact.name }} | Фамилия: {{ contact.surname }} | Группа: {{ contact.group }} | Телефон: {{ contact.phone }} |  Email: {{ contact.email }}
+                </a>
+            </div>
+
+            {% endfor %}
+
+            <h2>Нашли ошибку?</h2>
+                <form method="post" action="/review/post-review" >
+                    <div class="feedback-form">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="username" name="username" value="John Doe" required>
+
+                        <label for="age">Возраст:</label>
+                        <input type="number" id="age" name="age" value="25" required>
+                    </div >
+
+                    <div  class="feedback-form" id="gender">
+                        <a for="gender">Гендер: </a>
+                        <input type="radio" id="male" name="gender" value="Мужчина" checked>
+                        <label for="male">Мужчина</label>
+                        <input type="radio" id="female" name="gender" value="Женщина">
+                        <label for="female">Женщина</label>
+                    </div>
+                    <div class="feedback-form">
+                        <label for="agree">Согласен с обработкой персональных данных:</label>
+                        <input type="checkbox" id="agree" name="agree" checked>
+                    </div>
+                    <div class="feedback-form">
+                        <label for="birthdate">Дата рождения:</label>
+                        <input type="date" id="birthdate" name="birthdate" value="1990-01-01" >
+                    </div>
+                    <div class="feedback-form">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" value="password" required>
+                    </div>
+                    <div class="feedback-form">
+                        <div>
+                            <label for="comment">Комментарий:</label>
+                            <textarea id="comment" name="comment">Enter your comment here</textarea>
+                        </div>
+                         <button type="submit">Отправить</button>
+                    </div>
+                    <div>
+                        <input type="hidden" id="user_id" name="user_id" value="123456">
+                    </div>
+
+                </form>
+            {% for review in reviews %}
+            <div class="feedback-form">
+                <div>
+                    Имя: {{ review.name }} |  Возарст: {{ review.age }}
+                </div>
+                <div>
+                    Гендер: {{ review.gender }} | Согласие: {{ review.agree }} | Дата рождения: {{ review.birthdate }}
+                </div>
+                 <div>
+                    Пароль: {{ review.birthdate }} | Дата отправки: {{ review.date }}
+                </div>
+                 <div>
+                    Комментарий: {{ review.comment }}
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="container">
+            <a href="#top" class="scroll-top-link">
+                 <div class="arrow-up"></div>
+            </a>
+            <p>&copy; 2024 MyGucci. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

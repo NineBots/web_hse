@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О бренде Gucci</title>
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+</head>
+<body>
+    <header id = "top" class="header">
+        <div class="container">
+            <h1>MyGucci</h1>
+            <nav>
+                <ul>
+                    <li><a class = "header-link" href="#">Главная</a></li>
+                    <li><a class = "header-link" href="http://127.0.0.1:8000/algo/">Задача</a></li>
+                    <li><a class = "header-link" href="http://127.0.0.1:8000/review/">Отзывы</a></li>
+                    <li><a class = "header-link" target = "_blank" href="https://www.gucci.com/int/ru/">Партнер</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+		<ul>
+            <li >
+                <h2>История бренда</h2>
+                <p>Gucci - итальянский модный бренд, основанный в 1921 году Гуччо Гуччи. Компания начинала с производства высококачественных кожаных сумок, позднее расширив ассортимент на одежду, обувь, аксессуары и парфюмерию.</p>
+                <p>Сегодня Gucci является одним из ведущих мировых брендов в индустрии моды, известным своим роскошным стилем и инновационными дизайнами.</p>
+            </li>
+            <li>
+                <h2>Коллекции</h2>
+                <ol>
+                    <li>
+                        <h3>Коллекция "Bamboo"</h3>
+                        <p>Коллекция "Bamboo" от Gucci вдохновлена природой и знаковым элементом бренда - бамбуком. В этой коллекции вы найдете изысканные сумки и аксессуары, созданные с использованием инновационных технологий и высококачественных материалов.</p>
+						<img src="{% static 'main/images/bamboo/bamboo1.jpg' %}" class = "brand-img" alt="Новая коллекция 'Bamboo'">
+						<img src="{% static 'main/images/bamboo/bamboo2.jpg' %}" class = "brand-img" alt="Новая коллекция 'Bamboo'">
+						<img src="{% static 'main/images/bamboo/bamboo3.jpg' %}" class = "brand-img" alt="Новая коллекция 'Bamboo'">
+                    </li>
+                    <li>
+                        <h3>Коллекция "Flora"</h3>
+                        <p>Коллекция "Flora" представляет собой яркие и женственные наряды, украшенные узорами из цветов и растений. Эта коллекция стала настоящим символом стиля и элегантности.</p>
+						<img src="{% static 'main/images/flora/flora1.jpg' %}" class = "brand-img" alt="Новая коллекция 'Flora'">
+						<img src="{% static 'main/images/flora/flora2.jpg' %}" class = "brand-img" alt="Новая коллекция 'Flora'">
+						<img src="{% static 'main/images/flora/flora3.jpg' %}" class = "brand-img" alt="Новая коллекция 'Flora'">
+						<img src="{% static 'main/images/flora/flora4.jpg' %}" class = "brand-img" alt="Новая коллекция 'Flora'">
+						<img src="{% static 'main/images/flora/flora5.jpg' %}" class = "brand-img" alt="Новая коллекция 'Flora'">
+                    </li>
+                    <li>
+                        <h3>Коллекция "Gucci Garden"</h3>
+                        <p>Коллекция "Gucci Garden" - это ода красоте природы и вечной весне. Она включает в себя воздушные платья, обувь и аксессуары с яркими цветочными мотивами и множеством декоративных элементов.</p>
+						<img src="{% static 'main/images/gucci_garden/garden1.jpg' %}" class = "brand-img" alt="Коллекция 'Gucci Garden'">
+						<img src="{% static 'main/images/gucci_garden/garden2.jpg' %}" class = "brand-img" alt="Коллекция 'Gucci Garden'">
+						<img src="{% static 'main/images/gucci_garden/garden3.jpg' %}" class = "brand-img" alt="Коллекция 'Gucci Garden'">
+                    </li>
+                </ol>
+            </li>
+            <li>
+				<h2>Фотографии</h2>
+				<table class="photo-table">
+					<thead>
+
+					</thead>
+					<tbody>
+						<tr>
+							<td><img src="{% static 'main/images/bamboo/bamboo1.jpg' %}" alt="Новая коллекция 'Bamboo'"></td>
+							<td><img src="{% static 'main/images/bamboo/bamboo2.jpg' %}" alt="Новая коллекция 'Bamboo'"></td>
+							<td><img src="{% static 'main/images/bamboo/bamboo3.jpg' %}" alt="Новая коллекция 'Bamboo'"></td>
+						</tr>
+						<tr>
+							<td><img src="{% static 'main/images/flora/flora3.jpg' %}" alt="Коллекция 'Flora'"></td>
+							<td><img src="{% static 'main/images/flora/flora4.jpg' %}" alt="Коллекция 'Flora'"></td>
+							<td><img src="{% static 'main/images/flora/flora5.jpg' %}" alt="Коллекция 'Flora'"></td>
+						</tr>
+						<tr>
+							<td><img src="{% static 'main/images/gucci_garden/garden1.jpg' %}" alt="Коллекция 'Gucci Garden'"></td>
+							<td><img src="{% static 'main/images/gucci_garden/garden2.jpg' %}" alt="Коллекция 'Gucci Garden'"></td>
+							<td><img src="{% static 'main/images/gucci_garden/garden3.jpg' %}" alt="Коллекция 'Gucci Garden'"></td>
+						</tr>
+					</tbody>
+				</table>
+            </li>
+		</ul>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <a href="#top" class="scroll-top-link">
+                 <div class="arrow-up"></div>
+            </a>
+            <p>&copy; 2024 MyGucci. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

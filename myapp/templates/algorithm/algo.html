@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О бренде Gucci</title>
+    <link rel="stylesheet" href="{% static 'algorithm/css/algo.css' %}">
+</head>
+<body>
+    <header id = "top" class="header">
+        <div class="container">
+            <h1>MyGucci</h1>
+            <nav>
+                <ul>
+                    <li><a class = "header-link" href="http://127.0.0.1:8000/">Главная</a></li>
+                    <li><a class = "header-link" href="#">Задача</a></li>
+                    <li><a class = "header-link" href="http://127.0.0.1:8000/review/">Отзывы</a></li>
+                    <li><a class = "header-link" target = "_blank" href="https://www.gucci.com/int/ru/">Партнер</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+		    <h2>Размен денежной суммы</h2>
+            <div class="content-block">
+                <form id="exchange-form" method="post" action="/algo/post-num">
+                    {% csrf_token %}
+                    <label for="amount">Введите сумму:</label>
+                    <input type="number" id="amount" name="num" min="0" required>
+                    <a>&#8381</a>
+                    <button type="submit">Разменять</button>
+                </form>
+                <div id="result">
+                    <a>500 &#8381 :</a>
+                    <a class="ans-500">{{five_hundred}}</a>
+                    <a>|</a>
+
+                    <a>100 &#8381 :</a>
+                    <a class="ans-100">{{one_hundred}}</a>
+                    <a>|</a>
+
+                    <a>10 &#8381 :</a>
+                    <a class="ans-10">{{ten}}</a>
+                    <a>|</a>
+
+                    <a>2 &#8381 :</a>
+                    <a class="ans-2">{{ten}}</a>
+                    <a>|</a>
+
+                    <a>Остаток :</a>
+                    <a class="ans-2">{{rest}} &#8381</a>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <a href="#top" class="scroll-top-link">
+                 <div class="arrow-up"></div>
+            </a>
+            <p>&copy; 2024 MyGucci. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
